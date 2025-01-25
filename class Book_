@@ -1,0 +1,38 @@
+class Book:
+    def __init__(self,title,author,year):
+
+        self.title = title
+        self.author = author
+        self.year = year
+        self.available = True
+
+    def show_info(self):
+        if self. available == True:
+            print(f'Available! The Book Is {self.title} The Author Is {self.author}')
+        else :
+            print("Not Found")
+
+    def borrow(self):
+        if self.available == True:
+            
+            self.available = False
+            print(f"You Have Borrowed {self.title}")
+        else:
+            print("not available")
+
+    def return_book(self):
+
+        self.available = True
+        print(f"{self.title} is now available")
+
+b1 = Book("python","elmohande academy",2022)
+b1.borrow()
+b1.borrow()
+
+b1.return_book()
+b1.borrow()
+
+
+
+
+
